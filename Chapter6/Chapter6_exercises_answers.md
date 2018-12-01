@@ -19,7 +19,7 @@
 **split()** 函数:同样，我们也不纯粹的利用它，而是通过 **len(split(str,sub))** 的返回值来判断，如果返回值为1，说明str中没有sub，如果大于1，则说明包含 <br>
 
 **注意** <br>
-在python 2.7中string模块包含了上述函数，即上述函数有两种方式：
+在python 2.7中string模块包含了上述函数，即使用上述函数有两种方式：
 * count(str,sub) (这种方式要from string import *)
 * str.count(sub)<br>
 
@@ -85,6 +85,7 @@ def Strip(Str):
 
 ## 6-7 调试
 #### (a)研究这段代码想做什么，并填写注释
+这段代码是在给出一个整数num的情况下，求出1\~num中所有不是num的因子的数
 ```
 #输入一个数字
 num_str = raw_input('Enter a number:')
