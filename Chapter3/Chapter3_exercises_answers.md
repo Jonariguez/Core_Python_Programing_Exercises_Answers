@@ -17,7 +17,7 @@
 有时候会降低可读性，不提倡
 
 ## 3-5 在Python中可以将一个语句分多行书写吗？
-可以，使用\\或者闭合操作符(如小括号，中括号，话括号)或者三引号'''包裹也就可以。<br>
+可以，使用\\或者闭合操作符(如小括号，中括号，花括号)或者三引号'''包裹也就可以。<br>
 * if condition1 and \\<br>
     &nbsp;&nbsp;&nbsp;&nbsp;    condition2:<br>
 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; execute_code
