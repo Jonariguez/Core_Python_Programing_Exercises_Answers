@@ -8,3 +8,5 @@
 # [第六章 序列:字符串、列表和元组](Chapter6/Chapter6_exercises_answers.md)
 # [第七章 映像和集合类型](Chapter7/Chapter7_exercises_answers.md)
 # [第八章 条件和循环](Chapter8/Chapter8_exercises_answers.md)
+# [第九章 文件和输入输出](Chapter9/Chapter9_exercises_answers.md)
+# [第十一章 函数和函数式编程](Chapter11/Chapter11_exercises_answers.md)
