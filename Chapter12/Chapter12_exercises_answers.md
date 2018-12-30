@@ -14,7 +14,8 @@
 `from mymodule import foo`会将foo()函数导入到命名空间，可以直接用`foo()`来直接调用，而`import mymodule`是会把整个包导入到命名空间，调用可以用`mymodule.foo()`来调用。
 
 ## 12-3 导入"import module"和"from module import *"有什么不同
-`import module`是会把包`module`导入到命名空间,访问包中的属性时需要句点属性标识来调用，如`module.attr`，而`from module import *`会将所有的属性都导入，所有的属性均可以直接使用，但是容易污染当前的命名空间，因为可能其中许多属性都用不到，而且会覆盖掉自己命名空间中同名的属性，而`import module`则不会如此。还有一个不同就是，使用`import module`导入后，每次`module.attr`时都会在module中查找attr，而通过`from module import *`再attr时则可以直接在当前的命名空间中找到(因为它是被导入进来了)，所以后者算是优化了查找过程。[参考](https://www.cnblogs.com/yan-lei/p/7828871.html)
+`import module`是会把包`module`导入到命名空间,访问包中的属性时需要句点属性标识来调用，如`module.attr`，而`from module import *`会将所有的属性都导入，所有的属性均可以直接使用，但是容易污染当前的命名空间，因为可能其中许多属性都用不到，而且会覆盖掉自己命名空间中同名的属性，而`import module`则不会如此。还有一个不同就是，使用`import module`导入后，每次`module.attr`时都会在module中查找attr，而通过`from module import *`再attr时则可以直接在当前的命名空间中找到(因为它是被导入进来了)，所以后者算是优化了查找过程。
+<a href="https://www.cnblogs.com/yan-lei/p/7828871.html" target="_blank">参考</a><br>
 
 ## 12-4 名称空间和变量作用域有什么不同？
 名称空间是纯粹意义上的名字和对象间的映射关系，而作用域还指出了从用户代码的哪些物理位置可以访问到这些名字。<br>
@@ -41,8 +42,8 @@ Python 的作用域(scope)决定了我们在程序中能否直接使用名称空
 
 当在函数内部使用一个名称时，为了查找出该名称所引用的对象，Python 解释器的查找顺序为：函数名称空间 -> 模块名称空间 -> 内置名称空间.<br>
 __参考博客__：<br>
-[Python 名称空间与作用域](https://blog.csdn.net/lihao21/article/details/79112054)<br>
-[Python 之作用域和名字空间](https://www.cnblogs.com/chenny7/p/4206497.html)
+<a href="https://blog.csdn.net/lihao21/article/details/79112054" target="_blank">Python 名称空间与作用域</a><br>
+<a href="https://www.cnblogs.com/chenny7/p/4206497.html" target="_blank">Python 之作用域和名字空间</a><br>
 
 ## 12-5 使用__import__()
 #### (a)使用__import__把一个模块导入到你的名称空间
@@ -55,7 +56,7 @@ Module.attr
 Module = __import__('module')
 Attr = getattr(Module,'attr')
 ```
-[参考这里](https://blog.csdn.net/u011010851/article/details/77948363)
+<a href="https://blog.csdn.net/u011010851/article/details/77948363" target="_blank">参考这里</a><br>
 
 ## 12-6 创建一个importAs()函数，这个函数可以把一个模块导入到你的名称空间，但使用你指定的名字，而不是原始的名字。
 其实这就是__import__()函数的用法
