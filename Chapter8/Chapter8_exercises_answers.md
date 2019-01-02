@@ -1,7 +1,7 @@
 # 条件和循环
 
 ## 8-1 看下面的代码：
-```
+```python
 # statement A
 if x>0:
     # statement B
@@ -19,7 +19,7 @@ else:
 (c)如果x>0, A,B和E将会被执行 <br>
 
 ## 8-2 编写程序，让用户输入3个数字：from，to和increment。以i为步长，从f计数到t。
-```
+```python
 f = int(input('from:'))
 t = int(input('to:'))
 inc = int(input('increment:'))
@@ -37,7 +37,7 @@ range(3,19,3)
 range(-20,861,220)
 
 ## 8-4 写一个函数isprime(),如果输入的是一个素数返回True，否则返回False。
-```
+```python
 def isprime(n):
     if n==1: 
         return False
@@ -49,7 +49,7 @@ def isprime(n):
 ```
 
 ## 8-5 完成一个名为getfactors()函数，接受一个整型作为参数，返回它所有的约数的列表，包括1和它本身。
-```
+```python
 def getfactors(n):
     fact=[]
     for i in range(1,n+1):
@@ -61,7 +61,7 @@ def getfactors(n):
 ```
 
 ## 8-6 使用isprime()和getfactors()函数编写一个函数，它接受一个整型作为一个参数，返回该整型的所有素数因子的列表。如20为[2,2,5]
-```
+```python
 def primediv(n):
     temp = getfactors(n)
     res = []
@@ -75,7 +75,7 @@ def primediv(n):
 ```
 
 ## 8-7 完全数
-```
+```python
 #需要借助练习8-5的getfactors()函数
 def isprefect(n):
     temp = getfactors(n)
@@ -84,7 +84,7 @@ def isprefect(n):
 ```
 
 ## 8-8 阶乘
-```
+```python
 #使用循环
 def factorial(n):
     res=1
@@ -93,7 +93,7 @@ def factorial(n):
 
     return res
 ```
-```
+```python
 #使用递归
 def factorial(n):
     if n==1:
@@ -102,7 +102,7 @@ def factorial(n):
 ```
 
 ## 8-9 斐波那契数列
-```
+```python
 #使用循环
 def Fibonacci(n):
     f1=1
@@ -115,7 +115,7 @@ def Fibonacci(n):
 
     return f
 ```
-```
+```python
 #使用递归
 def Fibonacci(n):
     if n==1 or n==2:
@@ -124,7 +124,7 @@ def Fibonacci(n):
 ```
 
 ## 8-10 统计一句话中的元音，辅音以及单词的个数
-```
+```python
 import string
 def Count(sentence):
     words = sentence.split(' ')
@@ -142,7 +142,7 @@ def Count(sentence):
 ## 8-12 编写程序，用户给出start和end，然后生成一定格式的表格。
 首先要知道，数字范围在[32,126]的都是可打印的，所以可以直接判断[start,end]中是否有可打印的字符。<br>
 注意：程序在处理不可打印的字符时，按空格输出
-```
+```python
 start=int(input('start:'))
 end = int(input('end:'))
 Ascii = True

@@ -29,7 +29,7 @@
 ## 6-2 修改例6-1的idcheck.py脚本，使之可以检测长度为1的表示符，并且可以识别Python关键字。
 
 在程序的开头添加：
-```
+```python
 import keyword
 
 myIn = raw_input('Identifier to test? ')
@@ -47,7 +47,7 @@ if myIn in keyword.kwlist:
 ## 6-3 排序
 #### (a) 输入一串数字、并从大到小排列之
 
-```
+```python
 >>> aList
 >>> aList = [123,112,521,520,52,110,321,1,3,5]
 >>> aList
@@ -60,7 +60,7 @@ if myIn in keyword.kwlist:
 
 ## 6-4 把测试得分放到一个列表中去，计算出一个平均分
 
-```
+```python
 score = [85,96,76,84,65,80,55,74]
 tot = 0
 for i in range(len(score)):
@@ -72,7 +72,7 @@ print('avg:',tot*1.0/len(score))
 
 ## 6-6 创建一个string.strip()的替代函数：接受一个字符串，去掉它前面和后面的空格
 
-```
+```python
 def Strip(Str):
     while Str[0]==' ':
         Str=Str[1:]
@@ -86,7 +86,7 @@ def Strip(Str):
 ## 6-7 调试
 #### (a)研究这段代码想做什么，并填写注释
 这段代码是在给出一个整数num的情况下，求出1\~num中所有不是num的因子的数
-```
+```python
 #输入一个数字
 num_str = raw_input('Enter a number:')
 
@@ -118,14 +118,14 @@ print("after:",fac_list)
 在if num_num % fac_list[i] == 0成立的话则删除fac_list[i],此时fac_list元素个数减少一个，可以理解为fac_list[i]后面的元素都向前移动一个位置,这样的话就不需要i再增加1了。
 
 #### (c)修正(b)的问题
-```
+```python
 if num_num % fac_list[i] == 0:
         del fac_list[i]
         continue    #不需要下面的i+=1了
 ```
 
 ## 6-8 给出一个整型值，返回代表该值的英文
-```
+```python
 def numToEnglish(num):
     Bit = ['zero','one','two','three','four','five','six','seven','eight','nine','ten']
     Ten = ['ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen',
@@ -165,7 +165,7 @@ def numToEnglish(num):
 ```
 
 ## 6-9 接受分钟数，返回小时数和分钟数。总时间不变，要求小时数尽可能大
-```
+```python
 def solve(minutes):
     hours = minutes / 60
     mins = minutes % 60
@@ -174,7 +174,7 @@ def solve(minutes):
 
 ## 6-10 写一个函数，要求将改字符串的大小写反转
 
-```
+```python
 import string
 
 def UpperLower(Str):
@@ -192,7 +192,7 @@ def UpperLower(Str):
 
 ## 6-12
 #### (a) 写一个findchr(string,char)函数，在string中查找字符char，返回索引，找不到则返回-1
-```
+```python
 def findchr(string,char):
     for i in range(len(string)):
         if string[i] == char:
@@ -202,7 +202,7 @@ def findchr(string,char):
 ```
 
 #### (b) 写一个rfindchr(string,char)函数，在string中查找字符char，返回char最后一次出现的位置，找不到则返回-1
-```
+```python
 def rfindchr(string,char):
     for i in range(len(string)-1,-1,-1):
         if string[i] == char:
@@ -212,7 +212,7 @@ def rfindchr(string,char):
 ```
 
 #### (c) 写一个subchr(string,origchar,newchar)函数，如果找到匹配的字符就用新的字符替换原先的字符。返回修改后的字符串
-```
+```python
 def subchr(string,origchar,newchar):
     for i in range(len(string)):
         if string[i] == origchar:
@@ -223,7 +223,7 @@ def subchr(string,origchar,newchar):
 
 ## 6-14 设计“石头、剪子、步”游戏，用户输入一个选项，计算机随机一个选项，并给出结果
 
-```
+```python
 import random
 option = ['Rock','Scissors','Cloth']
 option_title = ['R','S','C']

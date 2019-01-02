@@ -47,12 +47,12 @@ __参考博客__：<br>
 
 ## 12-5 使用__import__()
 #### (a)使用__import__把一个模块导入到你的名称空间
-```
+```python
 Module = __import__('module')
 Module.attr
 ```
 #### (b)使用__import__从指定模块导入特定的名字
-```
+```python
 Module = __import__('module')
 Attr = getattr(Module,'attr')
 ```
@@ -60,7 +60,7 @@ Attr = getattr(Module,'attr')
 
 ## 12-6 创建一个importAs()函数，这个函数可以把一个模块导入到你的名称空间，但使用你指定的名字，而不是原始的名字。
 其实这就是__import__()函数的用法
-```
+```python
 def importAs(moduleName):
     return __import__(moduleName)
 ```

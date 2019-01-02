@@ -7,7 +7,7 @@ Python中的长整型与C语言的long并不是一个概念，Python的长整型
 ## 5-3 写一段脚本，输入一个测试成绩，输出他的平分成绩(A-F)
 ### A: 90\~100 B: 80\~89 C: 70\~79 D: 60\~69  F:<60
 
-```
+```python
 grade = int(input('请输入成绩:'))
 
 if 90<=grade<=100:
@@ -28,7 +28,7 @@ if grade<60:
 
 ## 5-4 判断给定年份是否是闰年。
 
-```
+```python
 year = int(input('请输入年份:'))
 
 if year%4 == 0 and year%100 != 0 or year%400 == 0:
@@ -41,7 +41,7 @@ else :
 ## 5-5 取任意小于1美元的金额，然后计算可以换成最少多少枚硬币。
 因为要求最少，所以肯定是先换面额大的硬币，然后再依次换小一点面额的金币。
 
-```
+```python
 money = float(input('请输入金额:'))
 money = int(money*100)  #转换成美分
 
@@ -67,17 +67,17 @@ print('the leastest: %d' % coins)
 
 ## 5-9 回答关于数值格式的问题：
 (a)
-```
+```python
 >>> 17 + 32
 49
 ```
 正常十进制运算
-```
+```python
 >>> 017 + 32
 47
 ```
 017前面以0开头是八进制表示，32是十进制，结果47也是十进制
-```
+```python
 >>> 017 + 032
 41
 ```
@@ -85,7 +85,7 @@ print('the leastest: %d' % coins)
 **注意**:在python2里0和0o开头都能表示这个数是八进制，而在python3里只用0o，0开头已经不适用。
 
 (b)
-```
+```python
 >>> 56l+78l
 134L
 ```
@@ -93,7 +93,7 @@ print('the leastest: %d' % coins)
 
 ## 5-10 写一对函数来进行华氏度为摄氏度的转换。
 
-```
+```python
 #输入temp_F为华氏度
 def F_to_C(temp_F):
     temp_C = (temp_F-32)*5/9
@@ -101,7 +101,7 @@ def F_to_C(temp_F):
 ```
 ## 5-11 
 #### (a) 使用循环和算术运算，求出0~20之间的所有偶数
-```
+```python
 #求出[0,20]的偶数
 for i in range(21):
     if i%2 == 0:
@@ -109,7 +109,7 @@ for i in range(21):
 ```
 
 #### (b) 同上，求出0~20之间的所有奇数
-```
+```python
 #求出[0,20]的奇数
 for i in range(21):
     if i%2 == 1:
@@ -121,7 +121,7 @@ for i in range(21):
 
 #### (d) 使用(c)的成果，检测一个整型能否被另一个整型整除
 直接用取余即可
-```
+```python
 def divisible(divisor,be_divisor):
     if divisor % be_divisor ==0:
         return True
@@ -130,7 +130,7 @@ def divisible(divisor,be_divisor):
 
 ## 5-13 写一个函数把由小时和分钟表示的时间转换为只用分钟表示的时间
 小时*60+分钟数即可
-```
+```python
 def Time():
     Clock = str(input('输入时间:'))
     Hour,Min=Clock.split(':')
@@ -141,13 +141,13 @@ def Time():
 ## 5-14 写一个函数，以定期存款利率为参数，假定该账户每日计算复利，请计算并返回年回报率
 假设本金是a，利率为r，那么一天之后本金变为a*(1+r)，两天后是a*(1+r)\*(1+r),... 一年后为a*(1+r)<sup>365</sup>,
 回报率为(a*(1+r)<sup>365</sup>-a)/a=(1+r)<sup>365</sup>-1.
-```
+```python
 def Rate_of_Return(r):
     return (1+r)**365-1
 ```
 
 ## 5-15 计算两个整型的最大公约数和最小公倍数
-```
+```python
 #最大公约数
 def gcd(a,b):
     if b==0:
@@ -155,7 +155,7 @@ def gcd(a,b):
     return gcd(b,a%b)
 ```
 
-```
+```python
 #最小公倍数
 def lcm(a,b):
     return a//gcd(a,b)*b
@@ -163,7 +163,7 @@ def lcm(a,b):
 
 ## 5-16 写一个Payment()函数实现如课本所示的功能
 
-```
+```python
 def Payment():
     money = float(input('Enter opening balance:'))
     cost = float(input('Enter monthly payment:'))

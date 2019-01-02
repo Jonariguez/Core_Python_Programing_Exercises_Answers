@@ -44,7 +44,7 @@ Python中的标识符：
 * 大小写敏感。<br>
 
 Keyword模块中同时包含了一个关键字列表和一个iskeyword()函数。<br>
-```
+```python
 >> import keyword
 >> keyword.kwlist
 ['and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del',

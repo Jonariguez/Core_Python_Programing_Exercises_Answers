@@ -1,7 +1,7 @@
 # 文件和输入输出
 
 ## 9-1 显示一个文件的所有行，忽略以#之后的内容
-```
+```python
 import os
 f=open('input.txt','r')
 for line in f:
@@ -15,7 +15,7 @@ for line in f:
 ```
 
 ## 9-2 提示输入数字N和文件F，然后显示文件F的前N行
-```
+```python
 N=int(input('Enter a N:'))
 F=str(input('Enter filename:'))
 f=open(F,'r')
@@ -26,7 +26,7 @@ for i,line in enumerate(f):
 ```
 
 ## 9-3 输入文件名，然后显示该文本文件的总行数
-```
+```python
 #readlines()会返回一个列表，每个元素是一个字符串代表文件中的一行内容
 Filename=str(input('Enter filename:'))
 f=open(Filename,'r')
@@ -34,7 +34,7 @@ print(len(f.readlines()))
 ```
 
 ## 9-4 输入文件名之后每次显示25行，然后询问是否继续显示
-```
+```python
 Filename=str(input('Enter filename:'))
 f=open(Filename,'r')
 page = 25
@@ -45,7 +45,7 @@ for i,line in enumerate(f):
 ```
 
 ## 9-5 比较两个文件，如果不同，找到第一处不同的行号和列号
-```
+```python
 F1=str(input('Enter filename1:'))
 F2=str(input('Enter filename2:'))
 f1=open(F1,'r').readlines()
@@ -82,7 +82,7 @@ else:
 那么不同之处是在1行4列，而不是2行1列，因为文件1中abc后面没有回车，而另一文件有，这也是不同之处。
 
 ## 9-8 模块研究
-```
+```python
 m=input('pls input a module name: ')
 module=__import__(m)  
 ml=dir(module)

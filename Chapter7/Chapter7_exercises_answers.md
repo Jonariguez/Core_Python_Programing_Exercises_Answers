@@ -12,13 +12,13 @@ update()方法可以用来将一个字典的内容添加到另外一个字典中
 
 ## 7-3 
 #### (a)创建一个字典，并把键按字母顺序显示出来。
-```
+```python
 >>> dic = {'a':'d','b':'c','c':'b','d':'a'}
 >>> print(sorted(dic.keys()))
 ['a', 'b', 'c', 'd']
 ```
 #### (b)根据已按字母顺序排序好的键，显示这个字典的键和值。
-```
+```python
 >>> dic = {'a':'d','b':'c','c':'b','d':'a'}
 >>> for k in sorted(dic.keys()):
 	print(k,dic[k])
@@ -28,7 +28,7 @@ c b
 d a
 ```
 #### 同(c)，不过按照值排序后，显示这个字典的键和值。
-```
+```python
 >>> for v in sorted(dic.values()):
 	for k in dic:
 		if dic[k]==v:
@@ -41,7 +41,7 @@ a d
 ```
 
 ## 7-4 给定两个长度相同的列表，如[1,2,3]和['a','b','c']，用这两个列表中的所有数据组成一个字典，如{1:'a',2:'b',3:'c'}
-```
+```python
 >>> a=[1,2,3]
 >>> b=['a','b','c']
 >>> c=dict(zip(a,b))
@@ -50,7 +50,7 @@ a d
 ```
 ## 7-5 
 (c)和(d)没有实现
-```
+```python
 #coding=utf-8
 import string
 import time
@@ -172,7 +172,7 @@ if __name__=='__main__':
 ```
 
 ## 7-7 颠倒字典中的键和值
-```
+```python
 #保证dic的值都是可哈希的
 def inv(dic):
     dict_res = dict([(dic[k],k) for k in dic])
@@ -180,7 +180,7 @@ def inv(dic):
 ```
 
 ## 7-8 人力资源
-```
+```python
 db={}
 
 def add():
@@ -236,7 +236,7 @@ if __name__=='__main__':
 
 ## 7-9 翻译
 #### 能满足(a)和(c)
-```
+```python
 #coding=utf-8
 def tr(srcstr,dststr,string):
     #如果两者相等，则不用翻译
@@ -250,7 +250,7 @@ def tr(srcstr,dststr,string):
     return string
 ```
 #### (b)区分大小写
-```
+```python
 #coding=utf-8
 #默认是flag=0即区分大小写，flag=1时不区分大小写
 def tr(srcstr,dststr,string,flag=0):
@@ -273,7 +273,7 @@ print(tr('Abcdef','abc','aBcdefdef',1))
 
 ## 7-10 
 #### (a)
-```
+```python
 #coding=utf-8
 import string
 def encrypt(plain):
@@ -304,7 +304,7 @@ print(encrypt('This is a short sentence'))
 **注意：集合里面的元素一定是可哈希的，比如set([[1,2],[3,4]])会出错，因为set里面的元素[1,2]和[3,4]为列表类型，列表不可哈希**
 
 ## 7-13 
-```
+```python
 import random
 num_cntA = random.randint(1,10)
 A = set([random.randint(0,9) for i in range(num_cntA)])

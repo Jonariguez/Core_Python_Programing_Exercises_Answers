@@ -1,7 +1,7 @@
 # 函数和函数式编程
 
 ## 11-1
-```
+```python
 def countToFour1():
     for eachNum in range(5):
         print eachNum,
@@ -24,13 +24,13 @@ def countToFour3(n=1):
 
 
 ## 11-5 修改习题5-7使得销售税的脚本以便让销售税不再是函数输入的必要之物。
-```
+```python
 def calTax(money,ratio=0.02):
     return money*ratio
 ```
 
 ## 11-7 map()的使用
-```
+```python
 #python2.7
 >>> map(None,[1,2,3],['abc','def','ghi'])
 [(1, 'abc'), (2, 'def'), (3, 'ghi')]
@@ -45,7 +45,7 @@ def calTax(money,ratio=0.02):
 ```
 
 ## 11-8 filter()的使用
-```
+```python
 #python2.7
 >>> filter(lambda year: year%4==0 and year%100!=0 or year%400==0,[1999,2000,2001,2003,2004,2100,2400])
 [2000, 2004, 2400]
@@ -59,20 +59,20 @@ def calTax(money,ratio=0.02):
 ```
 
 ## 11-9 reduce()的使用
-```
+```python
 def average(listNum):
     return reduce(lambda x,y: x+y,listNum)/len(listNum)
 ```
 如果使用python3的话，需要`from functools import reduce `.
 
 ## 11-10 分析下列代码做了什么
-```
+```python
 files = filter(lambda x:x and x[0]!='.',os.listdir(folder))
 ```
 将`folder`文件夹下的的文件夹和文件名称作为一个列表存在files中。
 
 ## 11-11 给定文件名，将该文件中的每一行内容的开头和结尾的空白去掉，然后再存到另一个新的文件中。再用列表解析完成一次。
-```
+```python
 #方法一
 filein = raw_input('Enter filename1:')
 fileout = raw_input('Enter filename2:')
@@ -90,7 +90,7 @@ with open(fileout,'w') as f:
 ```
 
 ## 11-12 编写timeit()函数
-```
+```python
 import time
 def cal(x,y):
     return x+y
@@ -103,21 +103,21 @@ def timeit(func,*kargs,**kwargs):
 
 ## 11-13
 #### (a)
-```
+```python
 def mult(x,y):
     return x*y
 ```
 #### (b)
-```
+```python
 reduce(mult,range(1,n+1))
 ```
 #### (c)
-```
+```python
 reduce(lambda x,y: x*y,range(1,5+1))
 ```
 
 #### (d)
-```
+```python
 def factorial1(n):
     res=1
     for i in range(1,n+1):
