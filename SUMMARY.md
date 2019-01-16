@@ -10,4 +10,5 @@
 # [第八章 条件和循环](Chapter8/Chapter8_exercises_answers.md)
 # [第九章 文件和输入输出](Chapter9/Chapter9_exercises_answers.md)
 # [第十一章 函数和函数式编程](Chapter11/Chapter11_exercises_answers.md)
-# [第十二章 函数和函数式编程](Chapter12/Chapter12_exercises_answers.md)
+# [第十二章 模块](Chapter12/Chapter12_exercises_answers.md)
+# [第十三章 面向对象编程](Chapter13/Chapter13_exercises_answers.md)
